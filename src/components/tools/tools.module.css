@@ -1,0 +1,53 @@
+.tools {
+    width: 154px;
+
+    background: #F5F8FA;
+}
+
+.header {
+    margin-left: 16px;
+    margin-top: 24px;
+    margin-bottom: 15px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #222222;
+
+}
+
+.item {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.imgitem {
+    margin-right: 15px;
+    margin-left: 16px;
+}
+
+.titleItem {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: inherit;
+}
+
+.item_active {
+    background-color: #FFFFFF;
+    margin-right: 16px;
+    border-radius: 0px 8px 8px 0px
+}
+
+.marker {
+    background: #0094FF;
+    border-radius: 0px 10px 10px 0px;
+    height: inherit;
+    width: 4px;
+    position: absolute;
+}
