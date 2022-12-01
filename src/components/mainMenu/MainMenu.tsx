@@ -1,29 +1,28 @@
 import React from "react";
 import Avatar from "../commons/avatar/Avatar";
 import DropDownList, { DropDownListItem } from "../commons/dropdownlist/DropDownList";
+import styled, { css } from "styled-components";
+import * as S from './styles';
+import * as C from './../../styles/components';
 
-import css from "./mainmenu.module.css";
 export default function MainMenu() {
-
     return (
-        <div className={css.mainmenu}>
-            <div className={css.logo}>
-                <img src="img/app/bordio/logo.png" alt="bordio" />
-            </div>
-            <div className={css.seach}>
-                <Search />
-            </div>
-            <div className={css.header}>
+        <S.Mainmenu>
+            <S.Logo>
+                <C.Img src="img/app/bordio/logo.png" alt="bordio" />
+            </S.Logo>
+            <Search />
+            <S.Header>
                 <Avatar />
-                <div className={css.title}>My workspace</div>
-            </div>
-            <div className={css.dropdownlist}>
+                <S.Title>My workspace</S.Title>
+            </S.Header>
+            <S.Dropdownlist>
                 <DropDownList title="Favorites">
                     <DropDownListItem>Marketing</DropDownListItem>
                     <DropDownListItem>Mobile App</DropDownListItem>
                 </DropDownList>
-            </div>
-            <div className={css.dropdownlist}>
+            </S.Dropdownlist>
+            <S.Dropdownlist>
                 <DropDownList title="My Projects">
                     <DropDownListItem>Marketing</DropDownListItem>
                     <DropDownListItem>Landing Pages</DropDownListItem>
@@ -31,21 +30,17 @@ export default function MainMenu() {
                     <DropDownListItem>Mobile App</DropDownListItem>
                     <DropDownListItem>House Construction</DropDownListItem>
                 </DropDownList>
-            </div>            
-        </div>
+            </S.Dropdownlist>
+        </S.Mainmenu>
     )
 
 };
 
 function Search() {
     return (
-        <div className={css.search}>
-            <input type="text" placeholder="Search..." />
-            <img src="img/app/search.png" alt="search" />
-        </div>
+        <S.Search>
+            <S.Input type="text" placeholder="Search..." />
+            <C.Img src="img/app/search.png" alt="search" />
+        </S.Search>
     )
 }
-
-
-
-

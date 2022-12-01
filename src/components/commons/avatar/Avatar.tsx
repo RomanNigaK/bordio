@@ -1,10 +1,16 @@
 import React,{FC} from "react";
-import css from './avatar.module.css';
+import styled from "styled-components";
+import { Img } from "../../../styles/components";
+const SAvatar = styled.div`
+    width: 22px;
+    height: 22px;
+    border-radius: 22px;   
+`
 const Avatar:FC=()=>{
     return(
-        <div className={css.avatar}>
-            <img src="img/app/avatar/foto.png" alt="" />
-        </div>
+        <SAvatar>
+            <Img src="img/app/avatar/foto.png" alt="" />
+        </SAvatar>
     )
 };
 

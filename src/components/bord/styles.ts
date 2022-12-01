@@ -1,47 +1,42 @@
-.header {
-    width: calc(100vw - 384px);
+import styled from "styled-components";
+
+export const  Header = styled.div`
+    width: 1500px;
     background: #FFFFFF;
     box-shadow: 0px 2px 4px #F0F1F2;
     height: 80px;
-}
-
-.options {
+`
+export const Options = styled.div`
     display: flex;
     align-items: center;
     height: inherit;
     justify-content: space-between;
     padding-left: 20px;
     padding-right: 20px;
-}
-
-.newoptions {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 119px;
+`
+export const Groupoptions = styled.div`
+    display:flex;
+`
+export const Search = styled.div`
+    width: 180px;
     height: 40px;
-    background: #0094FF;
-    border-radius: 50px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    color: #FFFFFF;
-}
-
-.rightoptions,
-.leftoptions {
     display: flex;
-
-}
-
-.notify {
+    align-items: center;
+    justify-content: space-between;
+    background: #F5F8FA;
+    border-radius: 50px;
     margin-right: 22px;
-
-}
-
-.quantitynotify {
+    padding-right: 16px;
+`
+export const Input = styled.input`
+    background-color: inherit;
+    padding-left: 16px;
+    width: 50px;
+`
+export const Notify = styled.div`
+    margin-right: 22px;
+`
+export const Quantitynotify = styled.div`
     width: 24px;
     height: 20px;
     position: absolute;
@@ -58,45 +53,37 @@
     border-radius: 4px;
     margin-top: -10px;
     margin-left: 10px;
+`
 
-}
-
-.search {
-    width: 180px;
-    height: 40px;
+export const Newoptions = styled.div`
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    background: #F5F8FA;
+    width: 119px;
+    height: 40px;
+    background: #0094FF;
     border-radius: 50px;
-    margin-right: 22px;
-    padding-right: 16px;
-}
-
-.search input {
-    background-color: inherit;
-    padding-left: 16px;
-    width: 50px;
-}
-
-.line {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+`
+export const Line = styled.div`
     display: flex;
     align-items: center;
     height: 48px;
     border-bottom: 1px solid #F3F3F3;
     margin-top: 10px;
-}
-
-.grouptitle {
-    display: flex;
-
-
-}
-
-.titleline {
-    width: 300px;
-    min-width: 300px;
-    max-width: 300px;
+`
+export const Grouptitle = styled.div`
+ display: flex;
+`
+export const Titleline = styled.div`
+    width: 330px;
+    min-width: 330px;
+    max-width: 330px;
     align-items: flex-end;
     font-family: 'Roboto';
     font-style: normal;
@@ -106,9 +93,9 @@
     display: flex;
     justify-content: center;
     color: #222222;
-}
+`
 
-.quantitytask {
+export const Quantitytask = styled.div`
     width: 26px;
     height: 20px;
     display: flex;
@@ -118,16 +105,15 @@
     border-radius: 100px;
     margin-left: 10px;
     font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 16px;
-text-align: right;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: right;
+    color: #8C939F;
+`
 
-color: #8C939F;
-}
-
-.create{
+export const Create = styled.div`
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -137,38 +123,35 @@ color: #8C939F;
     color: #8C939F;
     border-left: 1px solid #F3F3F3;
     padding-left: 36px;
-}
+`
 
-.columns{
-    display: flex;
-}
-.column{
+export const Column = styled.div`
     width: 300px;
+    max-width: 300px;
+    min-width: 300px;
     height: calc(100vh - 150px);
     border-right: 1px solid #F3F3F3;
     text-align: center;
     padding: 15px;
-}
-.note{
+`
+export const Note = styled.div`
     text-align: left;
     padding: 15px;
     margin-top: 15px;
-
     background: #ABE9CE;
-border-radius: 8px;
+    border-radius: 8px;
+`
 
-}
-.description{
+export const Description = styled.div`
     font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #222222;
+`
 
-color: #222222;
-}
-
-.timetask{
+export const Timetask = styled.div`
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -178,4 +161,7 @@ color: #222222;
     align-items: center;
     color: #435E52;  
     height: 20px;
-}
+`
+export const Columns = styled.div`
+    display: flex;
+`
