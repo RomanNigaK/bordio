@@ -17,38 +17,31 @@ export default function Tools() {
         { title: "Files", img: "img/app/tools/files.png", imgA: "img/app/tools/files_a.png" },
 
     ])
-
-
-
     return (
         <S.Tools>
             <S.Header>Tools</S.Header>
-            
-                {
-                    items.map(el => {
-                        let image: string;
-                        let isActive = false;
-                        if (el.title === itemToolsTitle) {
-                            image = el.imgA;
-                           isActive = true;
-                        }
-                        else {
-                            image = el.img;
-                        }
-                        
-                        return (
-                            <S.Item isActive={isActive} onClick={() => setItemToolsTitle(el.title)} key={el.title}>
-                                {el.title === itemToolsTitle ? <S.Marker /> : null}
-                                <S.Imgitem>
-                                    <C.Img src={image} />
-                                </S.Imgitem>
-                                <S.TitleItem>{el.title}</S.TitleItem>
-                            </S.Item>
-                        )
-
-                    })
-                }
-            
+            {
+                items.map(el => {
+                    let image: string;
+                    let isActive = false;
+                    if (el.title === itemToolsTitle) {
+                        image = el.imgA;
+                        isActive = true;
+                    }
+                    else {
+                        image = el.img;
+                    }
+                    return (
+                        <S.Item isActive={isActive} onClick={() => setItemToolsTitle(el.title)} key={el.title}>
+                            {el.title === itemToolsTitle ? <S.Marker /> : null}
+                            <S.Imgitem>
+                                <C.Img src={image} />
+                            </S.Imgitem>
+                            <S.TitleItem>{el.title}</S.TitleItem>
+                        </S.Item>
+                    )
+                })
+            }
         </S.Tools>
     )
 }

@@ -1,15 +1,15 @@
-import React,{ ReactElement, ReactNode } from "react";
+import React, { ReactElement, ReactNode } from "react";
 import styled, { css } from "styled-components";
 import { Img } from "../../../styles/components";
 
-interface IDropDownListProps{
-    children:ReactElement[]|ReactElement|null,
-    title:string,
+interface IDropDownListProps {
+    children: ReactElement[] | ReactElement | null,
+    title: string,
 }
 
-interface IDropDownLisItemtProps{
-    children:ReactNode,
-    
+interface IDropDownLisItemtProps {
+    children: ReactNode,
+
 }
 
 const fontStyle = css`
@@ -34,26 +34,22 @@ const Item = styled.div`
     margin-top: 18px;
 `
 
-
-export default function DropDownList({children,title,...props}:IDropDownListProps){
-    return(
+export default function DropDownList({ children, title, ...props }: IDropDownListProps) {
+    return (
         <Drop>
             <Header>
-                <Img src="img/app/dropdown.png" alt="" mleft="7px" mright="15px"/>
+                <Img src="img/app/dropdown.png" alt="" mleft="7px" mright="15px" />
                 {title}
             </Header>
-           
             {children}
-           
-            
         </Drop>
     )
 }
 
-export function DropDownListItem({children}:IDropDownLisItemtProps){
-    return(
+export function DropDownListItem({ children }: IDropDownLisItemtProps) {
+    return (
         <Item>
-        {children}
+            {children}
         </Item>
     )
 }
