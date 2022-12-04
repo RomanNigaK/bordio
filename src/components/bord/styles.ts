@@ -16,6 +16,7 @@ export const Options = styled.div`
 `
 export const Groupoptions = styled.div`
     display:flex;
+    align-items: center;
 `
 export const Search = styled.div`
     width: 180px;
@@ -40,8 +41,7 @@ export const Quantitynotify = styled.div`
     width: 24px;
     height: 20px;
     position: absolute;
-    font-family: 'Roboto';
-    font-style: normal;
+
     font-weight: 400;
     font-size: 10px;
     line-height: 10px;
@@ -64,9 +64,8 @@ export const Newoptions = styled.div`
     height: 40px;
     background: #0094FF;
     border-radius: 50px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
+
+  
     font-size: 14px;
     color: #FFFFFF;
 `
@@ -85,8 +84,7 @@ export const Titleline = styled.div`
     min-width: 330px;
     max-width: 330px;
     align-items: flex-end;
-    font-family: 'Roboto';
-    font-style: normal;
+
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
@@ -104,8 +102,7 @@ export const Quantitytask = styled.div`
     background: #E8EBEF;
     border-radius: 100px;
     margin-left: 10px;
-    font-family: 'Roboto';
-    font-style: normal;
+
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
@@ -114,8 +111,7 @@ export const Quantitytask = styled.div`
 `
 
 export const Create = styled.div`
-    font-family: 'Roboto';
-    font-style: normal;
+
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
@@ -134,17 +130,21 @@ export const Column = styled.div`
     text-align: center;
     padding: 15px;
 `
-export const Note = styled.div`
+export const Note = styled.div.attrs<{draging?:boolean}>((props)=>({
+    margintop:(props.draging===true?0.1:1),
+}))<{margintop?:string,draging?:boolean}>`
     text-align: left;
     padding: 15px;
-    margin-top: 15px;
-    background: #ABE9CE;
+    
+    opacity: ${({margintop})=>margintop};
     border-radius: 8px;
 `
 
-export const Description = styled.div`
-    font-family: 'Roboto';
-    font-style: normal;
+export const Description = styled.div.attrs<{strikethrough?:boolean}>((props)=>({
+    textstyle:(props.strikethrough===true?"line-through":"none")
+}))<{strikethrough?:boolean,textstyle?:string}>`
+
+    text-decoration: ${({textstyle})=>textstyle};
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
@@ -152,8 +152,7 @@ export const Description = styled.div`
 `
 
 export const Timetask = styled.div`
-    font-family: 'Roboto';
-    font-style: normal;
+
     font-weight: 400;
     font-size: 13px;
     line-height: 15px;
@@ -164,4 +163,15 @@ export const Timetask = styled.div`
 `
 export const Columns = styled.div`
     display: flex;
+`
+
+export const OnTargetDrop = styled.div`
+    height: 20px;
+    border:1px solid black;
+`
+
+export const ConternerNode = styled.div`
+    padding-top: 7px;
+    padding-bottom: 7px;
+  
 `
