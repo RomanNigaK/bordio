@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback, PropsWithChildren, RefObject } from "react";
+import React, { useState, useRef, useCallback, PropsWithChildren, RefObject, SetStateAction } from "react";
 import { Img } from "../../styles/components";
 import Avatar from "../commons/avatar/Avatar";
 import Select from "../commons/select/Select";
@@ -25,7 +25,8 @@ interface IColumnsProps extends ILineProps{
 
 interface IColumn {
     type: string,
-    upDate: Function,
+    upDate:Function,
+    //upDate:(state:IState[])=>void,
     state: IState[],
 }
 
@@ -34,12 +35,12 @@ interface IItem {
 }
 
 interface IContNodeProps extends PropsWithChildren {
-    cb: Function,
+    cb: (indexMove: number, indexHover: number) =>void,
     el: IState,
 }
 
 interface INode extends IState {
-    cb: Function,
+    cb: (indexMove: number, indexHover: number) =>void,
     contanerNoteRef: React.RefObject<HTMLInputElement>,
 }
 
@@ -174,9 +175,9 @@ function Column({ type, upDate, state }: IColumn) {
     return (
         <>
             <S.Column ref={dropRef} >
-                {state.filter((item, index) => item.statusTask === type).
+                {state.filter((item) => item.statusTask === type).
                     sort((prev, next) => prev.id - next.id).
-                    map((el, index) => {
+                    map((el) => {
                         return (
                             <ContNode el={el} cb={uddataState}></ContNode>
                         )
